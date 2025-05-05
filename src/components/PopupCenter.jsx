@@ -23,7 +23,7 @@ const PopupCenter = ({ id, userId, setNotification }) => {
     e.preventDefault();
 
     const response = await axios.post(
-      `http://localhost:3000/api/submitmsg/${id}`,
+      `https://nms-backend-5lqv.onrender.com/api/submitmsg/${id}`,
       { message: inputValue, userId: userId }
     );
     console.log("response /api/submitmsg", response);

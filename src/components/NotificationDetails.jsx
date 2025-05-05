@@ -11,7 +11,7 @@ const NotificationDetails = ({ user }) => {
     const fetchNotification = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/sendAlert/data/${id}`
+          `https://nms-backend-5lqv.onrender.com/api/sendAlert/data/${id}`
         );
         setNotification(response.data.data);
       } catch (error) {

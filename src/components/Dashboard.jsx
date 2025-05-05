@@ -12,7 +12,7 @@ const Dashboard = ({ user }) => {
   useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/alert");
+        const response = await axios.get("https://nms-backend-5lqv.onrender.com/api/alert");
         console.log("response ", response);
         setAlerts(response.data.alerts);
       } catch (error) {

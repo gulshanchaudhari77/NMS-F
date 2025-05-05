@@ -27,7 +27,7 @@ const Login = ({ setUser }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/login",
+        "https://nms-backend-5lqv.onrender.com/api/login",
         formData,
         
         {

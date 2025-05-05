@@ -24,7 +24,7 @@ const Signup = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:3000/api/user",
+      const response = await axios.post("https://nms-backend-5lqv.onrender.com/api/user",
         {username,email,password}
 
       );

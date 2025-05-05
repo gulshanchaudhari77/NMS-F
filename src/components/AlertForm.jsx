@@ -23,7 +23,10 @@ const AlertForm = ({ user }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/sendAlert",
+        // "http://localhost:3000/api/sendAlert",
+                "https://nms-backend-5lqv.onrender.com/api/sendAlert",
+
+        
         {
           ...alertData,
           userId: user._id, // User ID who is sending the alert

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-
+const AlertList = () => {
+  const [alerts, setAlerts] = useState([]);
+  const [filter, setFilter] = useState('All');
 
   const filteredAlerts = filter === 'All' ? alerts : alerts.filter((alert) => alert.type === filter);
 
