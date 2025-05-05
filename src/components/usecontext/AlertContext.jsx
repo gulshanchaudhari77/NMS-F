@@ -25,8 +25,13 @@ export const AlertProvider = ({ children }) => {
     fetchAlerts();
 
     // Socket listener for new alerts
-    const socket = io("https://nms-backend-5lqv.onrender.com");
+    const socket = io("https://nms-backend-5lqv.onrender.com", {
+      withCredentials: true,  // Make sure to include credentials if needed
+    });
+  
+
     socket.on("new-alert", (alertData) => {
+      
       setAlerts((prevAlerts) => {
         const updatedAlerts = [...prevAlerts, alertData];
         setAlertCount(updatedAlerts.length); // Update alert count
