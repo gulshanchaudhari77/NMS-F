@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.parallax {
+  height: 100vh; /* Full viewport height */
+  background-image: url('https://imgs.search.brave.com/dRDmMeV9T9jV9FZz6z5EDSHI_zsToV_2tacnFn0ztgk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzU3Lzg1LzQx/LzM2MF9GXzM1Nzg1/NDE1NV9wWjd1ZUNR/YVE4bEJsMWVQQ2Fh/UTVyUlVmS2N0eHI3/ZC5qcGc'); /* Replace with your image */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax.second {
+  background-image: url('https://imgs.search.brave.com/TB5KsmOlYKnjLetStZprSOspX3u5tqrQ4Mds_PjY7hU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/MDg4NDU2Ni9waG90/by9jaXR5c2NhcGUt/bWl4ZWQtd2l0aC1n/cmVlbi1wbGFudHMt/bXVsdGktbGF5ZXJl/ZC1pbWFnZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9clcy/SmNDYVF2NDFCVEtY/X2YzSl9OUG5VRlhw/cF9TSlZwT2JGdlZO/REJHcz0'); /* Replace with your second image */
+}
+
+.content {
+  padding: 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
