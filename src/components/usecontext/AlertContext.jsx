@@ -13,7 +13,7 @@ export const AlertProvider = ({ children }) => {
   useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/sendAlert/data");
+        const response = await axios.get("https://nms-backend-5lqv.onrender.com/sendAlert/data");
         const fetchedAlerts = response?.data?.data || [];
         setAlerts(fetchedAlerts);
         setAlertCount(fetchedAlerts.length); // Update the alert count
@@ -25,7 +25,7 @@ export const AlertProvider = ({ children }) => {
     fetchAlerts();
 
     // Socket listener for new alerts
-    const socket = io("http://localhost:3000");
+    const socket = io("https://nms-backend-5lqv.onrender.com");
     socket.on("new-alert", (alertData) => {
       setAlerts((prevAlerts) => {
         const updatedAlerts = [...prevAlerts, alertData];
